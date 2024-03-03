@@ -1,0 +1,21 @@
+#░▀█▀░▀▀█░█░█░█▄█░░░█▀▀░█▀█░█▀█░█▀▀░▀█▀░█▀▀
+#░░█░░░▀▄░█▄█░█░█░░░█░░░█░█░█░█░█▀▀░░█░░█░█
+#░▀▀▀░▀▀░░▀░▀░▀░▀░░░▀▀▀░▀▀▀░▀░▀░▀░░░▀▀▀░▀▀▀
+
+# Winkey to mod:
+    set $mod Mod4
+
+# Set mod to click + drag floating windows with mouse:
+    floating_modifier   $mod
+
+# Default i3 tiling mode:
+    workspace_layout    default
+
+# i3 Stacking layout:
+# (INFO: each window will be fullscreen and tabbed top to bottom)
+####workspace_layout stacking
+
+# i3 Tabbed layout:
+# (INFO: each new window will open fullscreen as a tab [left to right])
+####workspace_layout tabbed
+
