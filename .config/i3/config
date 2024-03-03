@@ -19,3 +19,69 @@
 # (INFO: each new window will open fullscreen as a tab [left to right])
 ####workspace_layout tabbed
 
+# .-----------------------------.
+# | W I N D O W   O P T I O N S |
+# '-----------------------------'
+
+# hide titlebar:
+    new_window      pixel
+
+# thin borders:
+hide_edge_borders   both
+
+for_window [class="^.*"] border pixel 3
+
+# inner/outer gaps:
+    gaps inner  20
+    gaps outer  3
+
+# show window title bars:
+# (INFO: not officially supported with i3gaps)
+####default_border     normal
+
+# window title alignment:
+####title_align    center
+
+# switch/iterate between workspaces
+    bindsym     $mod+Tab            workspace next
+    bindsym     $mod+Shift+Tab      workspace prev
+
+# switch to workspace
+    bindsym     $mod+1    workspace $ws1
+    bindsym     $mod+2    workspace $ws2
+    bindsym     $mod+3    workspace $ws3
+    bindsym     $mod+4    workspace $ws4
+    bindsym     $mod+5    workspace $ws5
+    bindsym     $mod+6    workspace $ws6
+    bindsym     $mod+7    workspace $ws7
+    bindsym     $mod+8    workspace $ws8
+    bindsym     $mod+9    workspace $ws9
+    bindsym     $mod+0    workspace $ws10
+
+# move focused container to workspace
+    bindsym     $mod+Shift+1    move container to workspace $ws1
+    bindsym     $mod+Shift+2    move container to workspace $ws2
+    bindsym     $mod+Shift+3    move container to workspace $ws3
+    bindsym     $mod+Shift+4    move container to workspace $ws4
+    bindsym     $mod+Shift+5    move container to workspace $ws5
+    bindsym     $mod+Shift+6    move container to workspace $ws6
+    bindsym     $mod+Shift+7    move container to workspace $ws7
+    bindsym     $mod+Shift+8    move container to workspace $ws8
+    bindsym     $mod+Shift+9    move container to workspace $ws9
+    bindsym     $mod+Shift+0    move container to workspace $ws10
+
+# resize window:
+    bindsym     $mod+z      mode "resize"
+
+mode "resize" 
+{
+    # Granular control w/ arrow keys:
+    bindsym     Left    resize shrink width 2 px or 2 ppt
+    bindsym     Down    resize grow height 2 px or 2 ppt
+    bindsym     Up      resize shrink height 2 px or 2 ppt
+    bindsym     Right   resize grow width 2 px or 2 ppt
+
+    # Exit resize mode: 
+    bindsym     Return   mode "default"
+    bindsym     Escape   mode "default"
+}
